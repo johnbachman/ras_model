@@ -49,7 +49,7 @@ Plot the fraction of HRAS-GTP vs. HRAS-GDP over time::
     plt.legend(loc='right')
     plt.xlabel('Time (sec)')
     plt.ylabel('Fraction of HRAS')
-    plt.savefig('output/simulation_1.png')
+    #plt.savefig('output/simulation_1.png')
 
 .. image:: /../output/simulation_1.png
 
@@ -72,8 +72,8 @@ Now we create a new initial condition for HRAS-GTP::
     GTP = model.monomers['GTP']
     HRAS_mGTP_0 = Parameter('HRAS_mGTP_0', 4e-6)
     model.parameters['GTP_0'].value = 10e-6 # Unlabeled competitor
-    model.initial(HRAS(gtp=1, s1s2='open', gef=None, p_loop=None,
-                       CAAX=None, oncogenic='n') % GTP(p=1, label='y'),
+    model.initial(HRAS(gtp=1, s1s2='open', gap=None, gef=None, p_loop=None,
+                       CAAX=None, mutant='WT') % GTP(p=1, label='y'),
                   HRAS_mGTP_0)
 
 Now we run the simulation and plot::
@@ -97,8 +97,8 @@ Repeat the above for GDP::
     GDP = model.monomers['GDP']
     HRAS_mGDP_0 = Parameter('HRAS_mGDP_0', 4e-6)
     model.parameters['GDP_0'].value = 10e-6 # Unlabeled competitor
-    model.initial(HRAS(gtp=1, s1s2='open', gef=None, p_loop=None,
-                       CAAX=None, oncogenic='n') % GDP(p=1, label='y'),
+    model.initial(HRAS(gtp=1, s1s2='open', gap=None, gef=None, p_loop=None,
+                       CAAX=None, mutant='WT') % GDP(p=1, label='y'),
                   HRAS_mGDP_0)
 
     sol = Solver(model, t)
@@ -111,7 +111,7 @@ Plot on the same plot::
     ax = plt.gca()
     ax.set_xscale('log')
 
-    plt.savefig('output/simulation_2.png')
+    #plt.savefig('output/simulation_2.png')
 
 .. image:: /../output/simulation_2.png
 
