@@ -56,9 +56,9 @@ Plot the fraction of HRAS-GTP vs. HRAS-GDP over time::
 Dissociation of Ras from GTP and GDP
 ------------------------------------
 
-To show the intrinsic rate of dissociation of GTP from GDP, we start the simulation
-with HRAS tightly bound to GTP (i.e., in the 'open' state) and monitor the fraction of
-HRAS bound over time.
+To show the intrinsic rate of dissociation of GTP from GDP, we start the
+simulation with HRAS tightly bound to GTP (i.e., in the 'open' state) and
+monitor the fraction of HRAS bound over time.
 
 First we reset all initial conditions::
 
