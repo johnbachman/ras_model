@@ -7,7 +7,7 @@ rasmodel/scenarios/
 
 # Ignore Sphinx build files
 doc/_build
-doc/_static
+doc/_static/generated
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
