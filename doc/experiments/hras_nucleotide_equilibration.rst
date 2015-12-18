@@ -1,8 +1,11 @@
 .. component::
    :module: rasmodel.experiments.hras_nucleotide_equilibration
 
-Ras binding to GTP and GDP
-==========================
+Ras-nucleotide association/dissociation kinetics
+================================================
+
+Association
+-----------
 
 As a simple test to make sure everything is working, we run a simulation of a
 subset of the default model showing the binding of HRAS to GTP and GDP coming to
@@ -49,12 +52,12 @@ Plot the fraction of HRAS-GTP vs. HRAS-GDP over time::
     plt.legend(loc='right')
     plt.xlabel('Time (sec)')
     plt.ylabel('Fraction of HRAS')
-    #plt.savefig('output/simulation_1.png')
+    plt.savefig('simulation_1.png')
 
-.. image:: /../output/simulation_1.png
+.. image:: ../_static/simulation_1.png
 
-Dissociation of Ras from GTP and GDP
-------------------------------------
+Dissociation
+------------
 
 To show the intrinsic rate of dissociation of GTP from GDP, we start the
 simulation with HRAS tightly bound to GTP (i.e., in the 'open' state) and
@@ -111,7 +114,7 @@ Plot on the same plot::
     ax = plt.gca()
     ax.set_xscale('log')
 
-    #plt.savefig('output/simulation_2.png')
+    plt.savefig('simulation_2.png')
 
-.. image:: /../output/simulation_2.png
+.. image:: ../_static/simulation_2.png
 

@@ -12,3 +12,5 @@ Model analysis
    hras_nucleotide_equilibration
    kras_mapk
    ras_gdp_binding
+   gxp_exchange
+   kras_gtp_hydrolysis
