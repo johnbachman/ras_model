@@ -13,7 +13,7 @@ Set up the model::
     from pysb.integrate import Solver
     from pysb import *
 
-    from tbidbaxlipo.util import fitting
+    from rasmodel import fitting
 
 
     KRAS = model.monomers['KRAS']
@@ -26,7 +26,8 @@ Set up the model::
                 CAAX=None, mutant=mutant) % GTP(p=1, label='n'),
                 Parameter('KRAS_%s_GTP_0' % mutant, 0))
 
-    plt.ion()
+Intrinsic hydrolysis::
+
     plt.figure()
 
     t = np.linspace(0, 1000, 1000) # 1000 seconds
@@ -46,7 +47,12 @@ Set up the model::
         plt.title('Intrinsic hydrolysis')
 
     plt.legend(loc='upper left', fontsize=11, frameon=False)
-    plt.savefig('kras_gtp_hydrolysis_1.png')
+    plt.savefig('doc/_static/generated/kras_gtp_hydrolysis_1.png')
+
+.. image:: /_static/generated/kras_gtp_hydrolysis_1.png
+    :width: 500px
+
+GAP-mediated hydrolysis::
 
     plt.figure()
     for mutant in KRAS.site_states['mutant']:
@@ -65,6 +71,8 @@ Set up the model::
         plt.title('GAP-mediated hydrolysis')
 
     plt.legend(loc='upper right', fontsize=11, frameon=False)
-    plt.savefig('kras_gtp_hydrolysis_2.png')
+    plt.savefig('doc/_static/generated/kras_gtp_hydrolysis_2.png')
 
+.. image:: /_static/generated/kras_gtp_hydrolysis_2.png
+    :width: 500px
 

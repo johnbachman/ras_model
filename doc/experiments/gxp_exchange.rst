@@ -64,9 +64,9 @@ First simulate the data from Figure 1A (GDP exchange)::
     plt.xlabel('Time (s)')
     plt.ylabel('[Bound mGDP] (nM)')
     plt.show()
-    plt.savefig('gxp_exchange_1.png', dpi=150)
+    plt.savefig('doc/_static/generated/gxp_exchange_1.png', dpi=150)
 
-.. image:: ../_static/gxp_exchange_1.png
+.. image:: /_static/generated/gxp_exchange_1.png
     :width: 500px
 
 Now simulate the data from Figure 1B (GTP exchange)::
@@ -94,8 +94,8 @@ Now simulate the data from Figure 1B (GTP exchange)::
     plt.ylabel('[Bound mGTP] (nM)')
     plt.show()
 
-    plt.savefig('gxp_exchange_2.png', dpi=150)
+    plt.savefig('doc/_static/generated/gxp_exchange_2.png', dpi=150)
 
-.. image:: ../_static/gxp_exchange_2.png
+.. image:: /_static/generated/gxp_exchange_2.png
     :width: 500px
 
